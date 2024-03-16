@@ -2,7 +2,7 @@
 //  Peram_s_Silver_SpoonsApp.swift
 //  Peram's Silver Spoons
 //
-//  Created by OSU APP CENTER on 3/15/24.
+//  Created by Ramana on 3/15/24.
 //
 
 import SwiftUI
@@ -11,7 +11,9 @@ import SwiftUI
 struct Peram_s_Silver_SpoonsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{
+                ContentView()
+            }
         }
     }
 }
