@@ -16,14 +16,14 @@ struct ExpenseListView: View {
             List{
                 ForEach(util.expenseList){inc in
                     VStack{
-                        ExpenseView(name: inc.name, amount: inc.amount, summary: inc.summary)
+                        ExpenseView(util: util, name: inc.name, amount: inc.amount, summary: inc.summary)
                     }
                     .background(.brown.opacity(0.3))
                 }
             }
             .listStyle(PlainListStyle())
             .frame(maxWidth: .infinity)
-            .navigationBarItems(trailing: NavigationLink("Add", destination: AddExpenseView(util: util)))
+            .navigationBarItems(trailing: NavigationLink("Add New Expense", destination: AddExpenseView(util: util)))
         }
         .background(Color.red.opacity(0.15))
         

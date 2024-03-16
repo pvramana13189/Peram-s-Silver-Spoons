@@ -59,7 +59,7 @@ struct AddIncomeView: View {
             Button{
                 saveIncome()
             }label: {
-                Text("Save Income Source")
+                Text("Save Income")
                     .textCase(.uppercase)
                     .padding()
                     .frame(maxWidth: .infinity)

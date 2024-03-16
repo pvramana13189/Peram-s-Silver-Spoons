@@ -23,7 +23,7 @@ struct IncomeListView: View {
             }
             .listStyle(PlainListStyle())
             .frame(maxWidth: .infinity)
-            .navigationBarItems(trailing: NavigationLink("Add", destination: AddIncomeView(util: util)))
+            .navigationBarItems(trailing: NavigationLink("Add New Income", destination: AddIncomeView(util: util)))
         }
         .background(Color.red.opacity(0.15))
         

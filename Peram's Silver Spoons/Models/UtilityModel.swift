@@ -56,6 +56,13 @@ class Utility2: Identifiable, ObservableObject{
     func addExpense(exp: ExpenseModel){
         expenseList.append(exp)
     }
+    
+    func updateExpense(updatedExpense: ExpenseModel) {
+        guard let index = expenseList.firstIndex(where: { $0.name == updatedExpense.name }) else {
+            return
+        }
+        expenseList[index] = updatedExpense
+    }
 }
 
 class Utility3: Identifiable, ObservableObject{

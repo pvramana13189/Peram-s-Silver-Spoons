@@ -54,7 +54,6 @@ struct IncomeSummaryView: View {
         if inc.summary != editedSummary{
             print("Before update income")
             let updateInc : IncomeModel = IncomeModel(name: inc.name, amount: inc.amount, summary: editedSummary)
-            //util.updateIncome(updatedIncome: updateInc)
             util.updateIncome(updatedIncome: updateInc)
         }
     }
