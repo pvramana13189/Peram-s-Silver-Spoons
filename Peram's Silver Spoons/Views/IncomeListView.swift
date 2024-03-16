@@ -16,7 +16,7 @@ struct IncomeListView: View {
             List{
                 ForEach(util.incomeList){inc in
                     VStack{
-                        IncomeView(name: inc.name, amount: inc.amount, summary: inc.summary)
+                        IncomeView(util: util, name: inc.name, amount: inc.amount, summary: inc.summary)
                     }
                     .background(.brown.opacity(0.3))
                 }

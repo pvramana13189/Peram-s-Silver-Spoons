@@ -27,6 +27,13 @@ class Utility1: Identifiable, ObservableObject{
     func addIncome(inc: IncomeModel){
         incomeList.append(inc)
     }
+    
+    func updateIncome(updatedIncome: IncomeModel) {
+        guard let index = incomeList.firstIndex(where: { $0.name == updatedIncome.name }) else {
+            return
+        }
+        incomeList[index] = updatedIncome
+    }
 }
 
 class Utility2: Identifiable, ObservableObject{

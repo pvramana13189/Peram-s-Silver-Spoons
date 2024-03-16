@@ -9,12 +9,14 @@ import SwiftUI
 
 struct IncomeView: View {
     
+    @ObservedObject var util: Utility1
+    
     var name: String
     var amount: Int
     var summary: String
     
     var body: some View {
-        NavigationLink(destination: IncomeSummaryView(summary: summary)) {
+        NavigationLink(destination: IncomeSummaryView(inc: IncomeModel(name: name, amount: amount, summary: summary), util: util)) {
             VStack{
                 HStack{
                     Text(name)
@@ -29,7 +31,7 @@ struct IncomeView: View {
 
 struct IncomeView_Previews: PreviewProvider {
     static var previews: some View{
-        IncomeView(name: "Food Sales", amount: 500, summary: "Most popular item: Pizza")
+        IncomeView(util: Utility1(utilNum: 1, title: "View and Modify Income", incomeList: incomeUtility, url: urlIncome), name: "Food Sales", amount: 500, summary: "Most popular item: Pizza")
     }
 }
 
