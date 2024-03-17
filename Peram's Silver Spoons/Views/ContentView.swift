@@ -17,7 +17,7 @@ struct ContentView: View {
                 NavigationLink(destination: FirstScreenView()){
                     Image("Restaurant_Image") // Image representing the restaurant
                 }
-                .navigationTitle("Perams's Silver Spoons") // Navigation title for the view
+                .navigationTitle("Peram's Silver Spoons") // Navigation title for the view
                 .toolbarColorScheme(.dark, for: .navigationBar) // Toolbar color scheme
                 .toolbarBackground(Color.clear, for: .navigationBar) // Toolbar background color
                 .toolbarBackground(.visible, for: .navigationBar) // Toolbar background visibility
