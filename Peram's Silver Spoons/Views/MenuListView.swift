@@ -45,6 +45,7 @@ struct MenuListView: View {
             .listStyle(PlainListStyle())
             .frame(maxWidth: .infinity)
         }
+        .background(Color.red.opacity(0.15))
     }
 }
 

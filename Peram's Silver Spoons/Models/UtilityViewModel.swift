@@ -21,9 +21,14 @@ var urlExpense = ""
 
 // Utility array to store menu data
 var menuUtility: [MenuModel] = [
-    MenuModel(name: "Cheeseburger", amount: 10.99),
-    MenuModel(name: "Margherita Pizza", amount: 12.99),
-    MenuModel(name: "Caesar Salad", amount: 8.99),
-    MenuModel(name: "Grilled Salmon", amount: 16.99),
-    MenuModel(name: "Pasta Carbonara", amount: 14.99)
+    MenuModel(name: "Pizza", amount: 12.99),
+    MenuModel(name: "Pasta", amount: 14.99),
+    MenuModel(name: "Party Platter", amount: 100),
+    MenuModel(name: "Corporate Buffet", amount: 25),
+    MenuModel(name: "Mojito", amount: 8),
+    MenuModel(name: "Margarita", amount: 10),
+    MenuModel(name: "Birthday Cake", amount: 50),
+    MenuModel(name: "Business Luncheon Buffet", amount: 30),
+    MenuModel(name: "Branded T-shirts", amount: 20),
+    MenuModel(name: "Coffee Mugs", amount: 15)
 ]
