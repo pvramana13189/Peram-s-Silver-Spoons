@@ -1,7 +1,7 @@
 
-# Peram's Silver Spoon
+# Peram's Silver Spoons
 
-Welcome to Peram's Silver Spoon Restaurant App! This iOS application is designed to help restaurant owners track their income and expenses efficiently. With a user-friendly interface and useful features, managing your restaurant finances has never been easier.
+Welcome to Peram's Silver Spoons Restaurant App! This iOS application is designed to help restaurant owners track their income and expenses efficiently. With a user-friendly interface and useful features, managing your restaurant finances has never been easier.
 
 ## Features
 - View and Modify Income: Keep track of income sources and amounts earned.
