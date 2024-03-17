@@ -12,6 +12,7 @@ struct Peram_s_Silver_SpoonsApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
+                // Initialize the main view of the app wrapped inside a NavigationView
                 ContentView()
             }
         }

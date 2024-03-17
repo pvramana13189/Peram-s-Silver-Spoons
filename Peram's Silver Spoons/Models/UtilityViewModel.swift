@@ -7,14 +7,19 @@
 
 import Foundation
 
+// Utility array to store income data
 var incomeUtility: [IncomeModel] = []
 
+// URL string for income images
 var urlIncome = ""
 
+// Utility array to store expense data
 var expenseUtility: [ExpenseModel] = []
 
+// URL string for expense images
 var urlExpense = ""
 
+// Utility array to store menu data
 var menuUtility: [MenuModel] = [
     MenuModel(name: "Cheeseburger", amount: 10.99),
     MenuModel(name: "Margherita Pizza", amount: 12.99),
