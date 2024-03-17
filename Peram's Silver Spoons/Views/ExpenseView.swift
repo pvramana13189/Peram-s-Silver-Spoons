@@ -29,7 +29,7 @@ struct ExpenseView: View {
                     
                     // Display the amount of the expense, aligning it to the trailing edge.
                     Text(String(describing: amount))
-                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .frame(alignment: .trailing)
                 }
             }
         }
