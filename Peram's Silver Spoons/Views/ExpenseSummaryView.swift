@@ -26,6 +26,11 @@ struct ExpenseSummaryView: View {
     
     var body: some View {
         VStack{
+            VStack{
+                Text(exp.name)
+                    .bold()
+                    .font(.largeTitle)
+            }
             VStack(spacing: 20) {
                 // Title for the section.
                 Text("Additional Information")
