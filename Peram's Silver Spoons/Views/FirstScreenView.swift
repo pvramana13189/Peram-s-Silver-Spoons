@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FirstScreenView: View {
     
-    @State private var profitOrLossPercentage: Int = 0
+    @State private var profitOrLossPercentage: Double = 0
     @State private var isProfitable: Bool = true
     
     @StateObject var util1 = Utility1(utilNum: 1, title: "View and Modify Income", incomeList: incomeUtility, url: urlIncome)
@@ -67,6 +67,7 @@ struct FirstScreenView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden() // used to hide back button to main screen which is causing new added data to delete when came back
         .background(Color.black.opacity(0.15))
         .onAppear {
             if totalIncome < totalExpenses{
@@ -75,7 +76,7 @@ struct FirstScreenView: View {
             else{
                 isProfitable = true
             }
-            profitOrLossPercentage = Int(profitOrLossCalculation())
+            profitOrLossPercentage = Double(profitOrLossCalculation())
         }
     }
     

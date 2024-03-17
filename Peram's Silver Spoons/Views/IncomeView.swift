@@ -22,7 +22,7 @@ struct IncomeView: View {
                     Text(name)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Text(String(describing: amount))
-                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .frame(alignment: .trailing)
                 }
             }
         }
