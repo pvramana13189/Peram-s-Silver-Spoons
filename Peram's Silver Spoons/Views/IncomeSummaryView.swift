@@ -13,6 +13,8 @@ struct IncomeSummaryView: View {
     @State private var editedSummary: String
     @ObservedObject var util: Utility1
     
+    @Environment(\.presentationMode) var presentationMode
+    
     init(inc: IncomeModel, util: Utility1) {
         self.inc = inc
         self.util = util
@@ -37,6 +39,7 @@ struct IncomeSummaryView: View {
         VStack{
             Button{
                 updateIncomeSummary()
+                presentationMode.wrappedValue.dismiss()
             }label: {
                 Text("Save")
                     .textCase(.uppercase)

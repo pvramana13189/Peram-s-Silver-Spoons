@@ -13,6 +13,8 @@ struct ExpenseSummaryView: View {
     @State private var editedSummary: String
     @ObservedObject var util: Utility2
     
+    @Environment(\.presentationMode) var presentationMode
+    
     init(exp: ExpenseModel, util: Utility2) {
         self.exp = exp
         self.util = util
@@ -37,6 +39,7 @@ struct ExpenseSummaryView: View {
         VStack{
             Button{
                 updateExpenseSummary()
+                presentationMode.wrappedValue.dismiss()
             }label: {
                 Text("Save")
                     .textCase(.uppercase)

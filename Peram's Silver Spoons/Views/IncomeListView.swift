@@ -13,6 +13,19 @@ struct IncomeListView: View {
     
     var body: some View {
         VStack{
+            VStack{
+                HStack{
+                    Text("Income Source")
+                        .padding()
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text("Amount")
+                        .padding()
+                        .bold()
+                        .frame(alignment: .trailing)
+                }
+                .background(Color.orange.opacity(0.5).cornerRadius(10))
+            }
             List{
                 ForEach(util.incomeList){inc in
                     VStack{

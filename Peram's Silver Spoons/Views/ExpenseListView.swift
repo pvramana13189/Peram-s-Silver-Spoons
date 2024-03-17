@@ -13,6 +13,19 @@ struct ExpenseListView: View {
     
     var body: some View {
         VStack{
+            VStack{
+                HStack{
+                    Text("Expense Source")
+                        .padding()
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text("Amount")
+                        .padding()
+                        .bold()
+                        .frame(alignment: .trailing)
+                }
+                .background(Color.orange.opacity(0.5).cornerRadius(10))
+            }
             List{
                 ForEach(util.expenseList){inc in
                     VStack{

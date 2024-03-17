@@ -15,6 +15,9 @@ struct AddIncomeView: View {
     
     @ObservedObject var util: Utility1
     
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showError = false
+    
     var body: some View {
         
         VStack{
@@ -71,16 +74,29 @@ struct AddIncomeView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.red.opacity(0.15))
+        .alert(isPresented: $showError) {
+            Alert(
+                title: Text("Error"),
+                message: Text("Please enter both Income Source and Amount"),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
     
     func saveIncome(){
-        let newInc : IncomeModel = IncomeModel(name: incname, amount: incamount, summary: incsummary)
-        util.addIncome(inc: newInc)
+        if (incname == "" || incamount == 0) {
+            showError = true
+        }
+        else{
+            let newInc : IncomeModel = IncomeModel(name: incname, amount: incamount, summary: incsummary)
+            util.addIncome(inc: newInc)
+            
+            incname = ""
+            incamount = 0
+            incsummary = ""
         
-        incname = ""
-        incamount = 0
-        incsummary = ""
-        
+            presentationMode.wrappedValue.dismiss()
+        }
     }
 }
 

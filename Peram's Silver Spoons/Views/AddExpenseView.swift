@@ -15,6 +15,9 @@ struct AddExpenseView: View {
     
     @ObservedObject var util: Utility2
     
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showError = false
+    
     var body: some View {
         
         VStack{
@@ -71,16 +74,29 @@ struct AddExpenseView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.red.opacity(0.15))
+        .alert(isPresented: $showError) {
+            Alert(
+                title: Text("Error"),
+                message: Text("Please enter both Expense Source and Amount"),
+                dismissButton: .default(Text("Okay"))
+            )
+        }
     }
     
     func saveExpense(){
-        let newExp : ExpenseModel = ExpenseModel(name: expname, amount: expamount, summary: expsummary)
-        util.addExpense(exp: newExp)
-        
-        expname = ""
-        expamount = 0
-        expsummary = ""
-        
+        if (expname == "" || expamount == 0) {
+            showError = true
+        }
+        else{
+            let newExp : ExpenseModel = ExpenseModel(name: expname, amount: expamount, summary: expsummary)
+            util.addExpense(exp: newExp)
+            
+            expname = ""
+            expamount = 0
+            expsummary = ""
+            
+            presentationMode.wrappedValue.dismiss()
+        }
     }
 }
 
